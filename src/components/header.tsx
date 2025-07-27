@@ -7,18 +7,18 @@ export default function Header() {
   return (
     <div className="min-h-[10rem]  flex items-center flex-col px-2">
       {/* Max width nilagay ko d2 kasi pag w mag ooverlap since rem ginamit ko so maximum width lang */}
-      <header className="container mx-auto max-w-[50rem]  flex items-center gap-5">
+      <header className="container mx-auto max-w-[50rem]  flex items-center gap-3 sm:gap-5">
         <img
           src="/image/Profile.jpg"
           alt="Jayvee"
-          className="rounded h-auto w-[10rem]"
+          className="rounded h-auto w-[7rem] sm:w-[10rem]"
         />
         <div className="w-full">
           <header className="w-full flex justify-between items-center pr-3">
-            <h1 className="text-[1.2rem] md:text-2xl font-bold">
-              Javee maniquiz
+            <h1 className="text-[1.1rem] md:text-2xl font-bold">
+              Jayvee Maniquiz
             </h1>
-            <DayNightSwitch className="h-[2rem] " />
+            <DayNightSwitch className="h-[1.8rem] " />
           </header>
           <div className="flex items-center gap-1 mt-[0.1rem]">
             <MapPin size={15} />
