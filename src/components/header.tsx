@@ -1,5 +1,5 @@
-import Image from "next/image";
-import { MapPin, Facebook, Github, Download } from "lucide-react";
+
+import { MapPin, Facebook, Github} from "lucide-react";
 import { Button } from "./ui/button";
 import { DayNightSwitch } from "./day-night";
 

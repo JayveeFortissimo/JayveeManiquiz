@@ -18,8 +18,8 @@ export default function Content2() {
               </div>
 
               <div>
-                Also I'm Full time Musician for over 11 years so when not
-                writing code i'm expand to my knowledge in music cuz iwant to
+                Also I`m Full time Musician for over 11 years so when not
+                writing code i`m expand to my knowledge in music cuz iwant to
                 becaome a professional musician that is my real dream
               </div>
             </CardContent>
