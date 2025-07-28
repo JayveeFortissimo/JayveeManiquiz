@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { Card, CardHeader, CardContent } from "./ui/card";
 import { BriefcaseBusiness, Laptop, ArrowRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
@@ -8,7 +8,7 @@ import { Frontend, Backend, DeveloperTools } from "@/utils/techStack";
 import { useRouter } from "next/navigation";
 
 export default function Content1() {
-   const router = useRouter();
+  const router = useRouter();
   return (
     <div className="min-h-[30rem] px-2 flex mt-10 md:px-0">
       <div className="container mx-auto w-full max-w-[50rem]  grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-4">
@@ -40,7 +40,10 @@ export default function Content1() {
                 <p className="font-bold">Tech Stack</p>
               </div>
 
-              <div className="flex gap-2 items-center cursor-pointer" onClick={() => router.push("/pages/TechStack")}>
+              <div
+                className="flex gap-2 items-center cursor-pointer"
+                onClick={() => router.push("/pages/TechStack")}
+              >
                 <p className="text-[0.8rem]">View All</p>
                 <ArrowRight size={16} />
               </div>
@@ -51,7 +54,12 @@ export default function Content1() {
                 <div className="w-full flex flex-wrap gap-3 mt-3">
                   {Frontend.map((item, idx) => (
                     <Badge key={idx} variant="outline">
-                      {item}
+                      <img
+                        src={`/image/${item.image}`}
+                        alt=""
+                        className="h-auto w-[1.2rem]"
+                      />
+                      {item.name}
                     </Badge>
                   ))}
                 </div>
@@ -62,7 +70,12 @@ export default function Content1() {
                 <div className="w-full flex flex-wrap gap-3 mt-3">
                   {Backend.map((item, idx) => (
                     <Badge key={idx} variant="outline">
-                      {item}
+                      <img
+                        src={`/image/${item.image}`}
+                        alt=""
+                        className="h-auto w-[1.2rem]"
+                      />
+                      {item.name}
                     </Badge>
                   ))}
                 </div>
@@ -73,7 +86,12 @@ export default function Content1() {
                 <div className="w-full flex flex-wrap gap-3 mt-3">
                   {DeveloperTools.map((item, idx) => (
                     <Badge key={idx} variant="outline">
-                      {item}
+                      <img
+                        src={`/image/${item.image}`}
+                        alt=""
+                        className="h-auto w-[1.2rem]"
+                      />
+                      {item.name}
                     </Badge>
                   ))}
                 </div>

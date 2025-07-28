@@ -12,5 +12,4 @@ const MyExperience: Experience[] = [
   },
 ];
 
-
-export default MyExperience
+export default MyExperience;

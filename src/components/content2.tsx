@@ -9,6 +9,7 @@ export default function Content2() {
   const router = useRouter();
   return (
     <div className="min-h-[30rem]">
+     
       {/* Max width nilagay ko d2 kasi pag w mag ooverlap since rem ginamit ko so maximum width lang */}
       <div className="container mx-auto max-w-[50rem] mt-5 grid grid-cols-1 gap-2  md:grid-cols-[1fr_2fr] px-2 md:px-0">
         <div>
