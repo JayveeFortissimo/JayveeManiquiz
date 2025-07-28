@@ -3,24 +3,18 @@ import { MapPin, Facebook, Github, Mail } from "lucide-react";
 import { Button } from "./ui/button";
 import { DayNightSwitch } from "./day-night";
 import { useTheme } from "next-themes";
-import { useState } from "react";
 import { SparklesText } from "@/components/magicui/sparkles-text";
-import Link from "next/link";
+
 import { useRouter } from "next/navigation";
 export default function Header() {
-  const [isClicked, setCliecked] = useState<boolean>(false);
-
-  const { setTheme } = useTheme();
+ 
+  const { theme, setTheme } = useTheme();
 
   const toggleTheme = () => {
-    setCliecked((pro) => !pro);
+   setTheme(theme === "dark" ? "light" : "dark");
   };
 
-  if (isClicked) {
-    setTheme("dark");
-  } else {
-    setTheme("light");
-  }
+
   const redirect = useRouter();
 
   return (
@@ -49,18 +43,35 @@ export default function Header() {
             Full-Stack Web Developer
           </h1>
           <footer className="mt-2 flex items-center flex-wrap gap-3 w-full pr-3">
-            <Button  className="h-[1.8rem] bg-blue-500 cursor-pointer" onClick={() => redirect.push("https://www.facebook.com/jayvee.maniquiz.779/")}>
-            
+            <Button
+              className="h-[1.8rem] bg-blue-500 cursor-pointer"
+              onClick={() =>
+                redirect.push("https://www.facebook.com/jayvee.maniquiz.779/")
+              }
+            >
               <Facebook />
-             <p> Facebook</p>
+              <p> Facebook</p>
             </Button>
-            <Button className="h-[1.8rem]  cursor-pointer" onClick={() => redirect.push("https://github.com/JayveeFortissimo?tab=repositories")}>
+            <Button
+              className="h-[1.8rem]  cursor-pointer"
+              onClick={() =>
+                redirect.push(
+                  "https://github.com/JayveeFortissimo?tab=repositories"
+                )
+              }
+            >
               <Github />
               Github
             </Button>
 
-            <Button className="h-[1.8rem]  flex-auto     cursor-pointer hidden md:flex" 
-            onClick={()=> redirect.push('https://mail.google.com/mail/?view=cm&fs=1&to=maniquizjayvee5@gmail.com')}>
+            <Button
+              className="h-[1.8rem]  flex-auto     cursor-pointer hidden md:flex"
+              onClick={() =>
+                redirect.push(
+                  "https://mail.google.com/mail/?view=cm&fs=1&to=maniquizjayvee5@gmail.com"
+                )
+              }
+            >
               <Mail />
               Send Email
             </Button>
