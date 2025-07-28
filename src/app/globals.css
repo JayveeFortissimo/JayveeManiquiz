@@ -125,7 +125,7 @@
   font-family: 'Inter', sans-serif;
   font-weight: 530; /* Adjust as needed */
   font-style: normal;
-  letter-spacing: 0.5px; /* Add some letter spacing for beauty */
+  /* Add some letter spacing for beauty */
   line-height: 1.6; /* Improve line height */
-  color: #333; /* Set a nice text color */
+ /* Set a nice text color */
 }
