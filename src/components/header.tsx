@@ -11,13 +11,13 @@ export default function Header() {
 
   const toggleTheme = () => {
     setCliecked((pro) => !pro);
-
-    if (isClicked) {
-      return setTheme("light");
-    } else {
-      return setTheme("dark");
-    }
   };
+
+  if (isClicked) {
+    setTheme("dark");
+  } else {
+    setTheme("light");
+  }
 
   return (
     <div className="min-h-[10rem]  flex items-center flex-col px-2">
