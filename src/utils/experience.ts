@@ -25,6 +25,11 @@ const MyExperience: Experience[] = [
     company: "My Portfolio",
     year: 2024,
   },
+    {
+    title: "BSInformation Technology",
+    company: "Bulacan State University",
+    year: 2022,
+  },
 ];
 
 export default MyExperience;

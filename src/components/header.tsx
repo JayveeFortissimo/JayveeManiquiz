@@ -4,7 +4,7 @@ import { Button } from "./ui/button";
 import { DayNightSwitch } from "./day-night";
 import { useTheme } from "next-themes";
 import { SparklesText } from "@/components/magicui/sparkles-text";
-
+import { RainbowButton } from "@/components/magicui/rainbow-button";
 import { useRouter } from "next/navigation";
 export default function Header() {
  
@@ -64,7 +64,7 @@ export default function Header() {
               Github
             </Button>
 
-            <Button
+            <RainbowButton
               className="h-[1.8rem]  flex-auto     cursor-pointer hidden md:flex"
               onClick={() =>
                 redirect.push(
@@ -74,16 +74,16 @@ export default function Header() {
             >
               <Mail />
               Send Email
-            </Button>
+            </RainbowButton>
           </footer>
         </div>
       </header>
 
       <div className="w-full container mx-auto mt-5 flex items-center justify-center md:hidden ">
-        <Button className="h-[1.8rem]  flex-auto     cursor-pointer">
+        <RainbowButton className="h-[1.8rem]  flex-auto     cursor-pointer">
           <Mail />
           Send Email
-        </Button>
+        </RainbowButton>
       </div>
     </div>
   );
