@@ -1,11 +1,14 @@
-"use client"
+"use client";
 import { ArrowLeft } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { useRouter } from "next/navigation";
 import Myprojects from "@/utils/myprojects";
 import { Card,CardHeader, CardContent, CardFooter } from "@/components/ui/card";
-export default function page() {
+
+export default function Page() {
+
     const router = useRouter();
+
   return (
     <div className="container mx-auto max-w-[50rem] mt-10 min-h-[50rem] px-2 md:px-0">
       <header className="min-h-[3rem] flex gap-4 items-center " onClick={() => router.push("/")}>

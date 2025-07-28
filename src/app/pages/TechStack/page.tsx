@@ -3,7 +3,8 @@ import { ArrowLeft } from "lucide-react";
 import { Frontend, Backend, DeveloperTools } from "@/utils/techStack";
 import { Badge } from "@/components/ui/badge";
 import { useRouter } from "next/navigation";
-export default function page() {
+
+export default function Page() {
     const router = useRouter();
   return (
     <div className="container mx-auto max-w-[50rem] mt-10 min-h-[50rem] px-2 md:px-0">

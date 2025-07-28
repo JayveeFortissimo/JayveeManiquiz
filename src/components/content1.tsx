@@ -6,6 +6,7 @@ import MyExperience from "@/utils/experience";
 import { cn } from "@/lib/utils";
 import { Frontend, Backend, DeveloperTools } from "@/utils/techStack";
 import { useRouter } from "next/navigation";
+
 export default function Content1() {
    const router = useRouter();
   return (
