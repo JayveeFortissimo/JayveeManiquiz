@@ -1,5 +1,5 @@
 "use client";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import * as React from "react";
 import {
   motion,
@@ -65,8 +65,8 @@ const createStarVariants = (index: number): Variants => ({
 const DayNightSwitch = React.forwardRef<HTMLDivElement, DayNightSwitchProps>(
   ({ className, defaultChecked, onToggle, ...restProps }, ref) => {
     const id = React.useId();
-    const [checked, setChecked] = React.useState<boolean>(defaultChecked ?? true);
-    const [mounted, setMounted] = React.useState(false);
+    const [checked, setChecked] = useState<boolean>(defaultChecked ?? true);
+    const [mounted, setMounted] = useState(false);
 
     // Update the state when defaultChecked changes (important for theme synchronization)
     useEffect(() => {
