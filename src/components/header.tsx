@@ -24,7 +24,7 @@ export default function Header() {
       {/* Max width nilagay ko d2 kasi pag w mag ooverlap since rem ginamit ko so maximum width lang */}
       <header className="container mx-auto max-w-[50rem]  flex items-center gap-3 sm:gap-5">
         <img
-          src="/image/Profile.jpg"
+          src="/image/Profile.png"
           alt="Jayvee"
           className="rounded h-auto w-[7rem] sm:w-[10rem]"
         />
