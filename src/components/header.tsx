@@ -6,14 +6,18 @@ import { useTheme } from "next-themes";
 import { SparklesText } from "@/components/magicui/sparkles-text";
 import { RainbowButton } from "@/components/magicui/rainbow-button";
 import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
+
 export default function Header() {
- 
   const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
-  const toggleTheme = () => {
-   setTheme(theme === "dark" ? "light" : "dark");
-  };
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
+
+ const isLightTheme = mounted && theme === "light";
 
   const redirect = useRouter();
 
@@ -31,7 +35,11 @@ export default function Header() {
             <SparklesText className="text-[1.1rem] md:text-2xl font-bold">
               Jayvee Maniquiz
             </SparklesText>
-            <DayNightSwitch className="h-[1.8rem] " onClick={toggleTheme} />
+            <DayNightSwitch
+              className="h-[1.8rem] "
+              onToggle={(checked) => setTheme(checked ? "light" : "dark")}
+               defaultChecked={isLightTheme} 
+            />
           </header>
           <div className="flex items-center gap-1 mt-[0.1rem]">
             <MapPin size={15} />

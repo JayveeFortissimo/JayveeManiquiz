@@ -1,5 +1,5 @@
 "use client";
-
+import { useEffect } from "react";
 import * as React from "react";
 import {
   motion,
@@ -63,9 +63,22 @@ const createStarVariants = (index: number): Variants => ({
 });
 
 const DayNightSwitch = React.forwardRef<HTMLDivElement, DayNightSwitchProps>(
-  ({ className, defaultChecked = true, onToggle, ...restProps }, ref) => {
+  ({ className, defaultChecked, onToggle, ...restProps }, ref) => {
     const id = React.useId();
-    const [checked, setChecked] = React.useState<boolean>(defaultChecked);
+    const [checked, setChecked] = React.useState<boolean>(defaultChecked ?? true);
+    const [mounted, setMounted] = React.useState(false);
+
+    // Update the state when defaultChecked changes (important for theme synchronization)
+    useEffect(() => {
+      if (defaultChecked !== undefined) {
+        setChecked(defaultChecked);
+      }
+    }, [defaultChecked]);
+
+    // Handle mounting to prevent hydration mismatch
+    useEffect(() => {
+      setMounted(true);
+    }, []);
 
     const handleToggle = (newValue: boolean) => {
       setChecked(newValue);
@@ -73,6 +86,18 @@ const DayNightSwitch = React.forwardRef<HTMLDivElement, DayNightSwitchProps>(
     };
 
     const currentMode: AnimationMode = checked ? "day" : "night";
+
+    // Don't render until mounted to prevent hydration issues
+    if (!mounted) {
+      return (
+        <div
+          className={cn(
+            "relative w-20 h-10 rounded-md overflow-hidden border shadow bg-gray-200",
+            className
+          )}
+        />
+      );
+    }
 
     return (
       <motion.div
