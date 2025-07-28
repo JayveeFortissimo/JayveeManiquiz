@@ -1,7 +1,12 @@
+"use client";
 import { Card, CardHeader, CardContent, CardFooter } from "./ui/card";
-import { Laptop,ArrowRight } from "lucide-react";
+import { Laptop, ArrowRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { useRouter } from "next/navigation";
+import Myprojects from "@/utils/myprojects";
+
 export default function Content2() {
+  const router = useRouter();
   return (
     <div className="min-h-[30rem]">
       {/* Max width nilagay ko d2 kasi pag w mag ooverlap since rem ginamit ko so maximum width lang */}
@@ -29,79 +34,36 @@ export default function Content2() {
 
         <Card className="pt-4 min-h-[15rem]">
           <CardHeader className="flex flex-row justify-between items-center gap-2">
-        <div  className="flex gap-2 items-center">
+            <div className="flex gap-2 items-center">
               <Laptop size={18} className="text-gray-500" />
-            <p className="font-bold">My Projects</p>
-        </div>
+              <p className="font-bold">My Projects</p>
+            </div>
 
-          <div className="flex gap-2 items-center cursor-pointer">
-                <p className="text-[0.8rem]">View All</p>
-                <ArrowRight size={16} />
-              </div>
+            <div
+              className="flex gap-2 items-center cursor-pointer"
+              onClick={() => router.push("/pages/Projects")}
+            >
+              <p className="text-[0.8rem]">View All</p>
+              <ArrowRight size={16} />
+            </div>
           </CardHeader>
 
           <CardContent className=" gap-2 text-sm grid grid-cols-1  md:grid-cols-2">
-            <Card className="">
-              <CardHeader className="flex flex-row items-center gap-2">
-                <p className="font-bold text-[0.8rem]">
-                  Cristobal Gown Reservation
-                </p>
-              </CardHeader>
+            {Myprojects.map((item, idx) => (
+              <Card key={idx}>
+                <CardHeader className="flex flex-row items-center gap-2">
+                  <p className="font-bold text-[0.8rem]">{item.name}</p>
+                </CardHeader>
 
-              <CardContent>
-                <p className="text-[0.7rem]">
-                  Modern Look Online Gown Reservation System
-                </p>
-              </CardContent>
+                <CardContent>
+                  <p className="text-[0.7rem]">{item.content}</p>
+                </CardContent>
 
-              <CardFooter>
-                <Badge className="bg-gray-200 text-black">2024</Badge>
-              </CardFooter>
-            </Card>
-
-            <Card>
-              <CardHeader className="flex flex-row items-center gap-2">
-                <p className="font-bold text-[0.8rem]">Multibook</p>
-              </CardHeader>
-
-              <CardContent>
-                <p className="text-[0.7rem]">
-                  Website for our client in my OJT
-                </p>
-              </CardContent>
-
-              <CardFooter>
-                <Badge className="bg-gray-200 text-black">2025</Badge>
-              </CardFooter>
-            </Card>
-
-            <Card className="">
-              <CardHeader className="flex flex-row items-center gap-2">
-                <p className="font-bold text-[0.8rem]">Nombra System</p>
-              </CardHeader>
-
-              <CardContent>
-                <p className="text-[0.7rem]">My Personal Project</p>
-              </CardContent>
-
-              <CardFooter>
-                <Badge className="bg-gray-200 text-black">2025</Badge>
-              </CardFooter>
-            </Card>
-
-            <Card className="">
-              <CardHeader className="flex flex-row items-center gap-2">
-                <p className="font-bold text-[0.8rem]">Portfolio</p>
-              </CardHeader>
-
-              <CardContent>
-                <p className="text-[0.7rem]">My Personal Portfolio</p>
-              </CardContent>
-
-              <CardFooter>
-                <Badge className="bg-gray-200 text-black">2025</Badge>
-              </CardFooter>
-            </Card>
+                <CardFooter>
+                  <Badge className="bg-gray-200 text-black">{item.year}</Badge>
+                </CardFooter>
+              </Card>
+            ))}
           </CardContent>
         </Card>
       </div>
