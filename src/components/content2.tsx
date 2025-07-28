@@ -11,28 +11,8 @@ export default function Content2() {
     <div className="min-h-[30rem]">
      
       {/* Max width nilagay ko d2 kasi pag w mag ooverlap since rem ginamit ko so maximum width lang */}
-      <div className="container mx-auto max-w-[50rem] mt-5 grid grid-cols-1 gap-2  md:grid-cols-[1fr_2fr] px-2 md:px-0">
-        <div>
-          <Card className="pt-4 min-h-[15rem]">
-            <CardHeader className="flex flex-row items-center gap-2">
-              <Laptop size={18} className="text-gray-500" />
-              <p className="font-bold">Beyond Coding</p>
-            </CardHeader>
-            <CardContent className="flex flex-col gap-5 text-sm">
-              <div>
-                When not writing code, I explore other new technology trends. Im
-                not stoping to expand my knowledge.
-              </div>
-
-              <div>
-                Also I`m Full time Musician for over 11 years so when not
-                writing code i`m expand to my knowledge in music cuz iwant to
-                becaome a professional musician that is my real dream
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-
+      <div className="container mx-auto max-w-[50rem] mt-5 grid grid-cols-1  px-2 md:px-0">
+       
         <Card className="pt-4 min-h-[15rem]">
           <CardHeader className="flex flex-row justify-between items-center gap-2">
             <div className="flex gap-2 items-center">
@@ -53,11 +33,11 @@ export default function Content2() {
             {Myprojects.map((item, idx) => (
               <Card key={idx}>
                 <CardHeader className="flex flex-row items-center gap-2">
-                  <p className="font-bold text-[0.8rem]">{item.name}</p>
+                  <p className="font-bold text-[1rem]">{item.name}</p>
                 </CardHeader>
 
                 <CardContent>
-                  <p className="text-[0.7rem]">{item.content}</p>
+                  <p className="text-[0.8rem]">{item.content}</p>
                 </CardContent>
 
                 <CardFooter>
