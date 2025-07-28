@@ -1,9 +1,24 @@
-
-import { MapPin, Facebook, Github} from "lucide-react";
+"use client";
+import { MapPin, Facebook, Github } from "lucide-react";
 import { Button } from "./ui/button";
 import { DayNightSwitch } from "./day-night";
-
+import { useTheme } from "next-themes";
+import { useState } from "react";
 export default function Header() {
+  const [isClicked, setCliecked] = useState<boolean>(false);
+
+  const { setTheme } = useTheme();
+
+  const toggleTheme = () => {
+    setCliecked((pro) => !pro);
+
+    if (isClicked) {
+      return setTheme("light");
+    } else {
+      return setTheme("dark");
+    }
+  };
+
   return (
     <div className="min-h-[10rem]  flex items-center flex-col px-2">
       {/* Max width nilagay ko d2 kasi pag w mag ooverlap since rem ginamit ko so maximum width lang */}
@@ -18,7 +33,7 @@ export default function Header() {
             <h1 className="text-[1.1rem] md:text-2xl font-bold">
               Jayvee Maniquiz
             </h1>
-            <DayNightSwitch className="h-[1.8rem] " />
+            <DayNightSwitch className="h-[1.8rem] " onClick={toggleTheme} />
           </header>
           <div className="flex items-center gap-1 mt-[0.1rem]">
             <MapPin size={15} />
@@ -26,7 +41,7 @@ export default function Header() {
               Bulacan, Philippines
             </p>
           </div>
-          <h1 className="text-[0.9rem] text-gray-500 md:text-[1.2rem] mt-2">
+          <h1 className="text-[0.9rem]  md:text-[1rem] mt-2">
             Full-Stack Web Developer
           </h1>
           <footer className="mt-2 flex items-center flex-wrap gap-3 w-full pr-3">
