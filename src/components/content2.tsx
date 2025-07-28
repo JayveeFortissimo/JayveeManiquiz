@@ -1,5 +1,5 @@
 import { Card, CardHeader, CardContent, CardFooter } from "./ui/card";
-import { Laptop } from "lucide-react";
+import { Laptop,ArrowRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 export default function Content2() {
   return (
@@ -28,9 +28,16 @@ export default function Content2() {
         </div>
 
         <Card className="pt-4 min-h-[15rem]">
-          <CardHeader className="flex flex-row items-center gap-2">
-            <Laptop size={18} className="text-gray-500" />
+          <CardHeader className="flex flex-row justify-between items-center gap-2">
+        <div  className="flex gap-2 items-center">
+              <Laptop size={18} className="text-gray-500" />
             <p className="font-bold">My Projects</p>
+        </div>
+
+          <div className="flex gap-2 items-center cursor-pointer">
+                <p className="text-[0.8rem]">View All</p>
+                <ArrowRight size={16} />
+              </div>
           </CardHeader>
 
           <CardContent className=" gap-2 text-sm grid grid-cols-1  md:grid-cols-2">
