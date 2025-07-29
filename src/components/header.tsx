@@ -76,7 +76,7 @@ export default function Header() {
               className="h-[1.8rem]  flex-auto     cursor-pointer hidden md:flex"
               onClick={() =>
                 redirect.push(
-                  "https://mail.google.com/mail/?view=cm&fs=1&to=maniquizjayvee5@gmail.com"
+                  "https://mail.google.com/mail/?view=cm&fs=1&to=maniquizjayvee.business@gmail.com"
                 )
               }
             >

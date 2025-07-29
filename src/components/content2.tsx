@@ -12,6 +12,7 @@ export default function Content2() {
     <div className="min-h-[30rem]">
       {/* Max width nilagay ko d2 kasi pag w mag ooverlap since rem ginamit ko so maximum width lang */}
       <div className="container mx-auto max-w-[50rem] mt-5 grid grid-cols-1  px-2 md:px-0 gap-2">
+        {/* My Projects */}
         <Card className="pt-4 min-h-[15rem]">
           <CardHeader className="flex flex-row justify-between items-center gap-2">
             <div className="flex gap-2 items-center">
@@ -27,17 +28,16 @@ export default function Content2() {
               <ArrowRight size={16} />
             </div>
           </CardHeader>
-
-          <CardContent className=" gap-2 text-sm grid grid-cols-1  md:grid-cols-2">
+            
+          <CardContent 
+          className=" gap-2 text-sm grid grid-cols-1  md:grid-cols-2 "
+         
+          >
             {Myprojects.map((item, idx) => (
-              <Card key={idx}>
+              <Card key={idx} className="cursor-pointer"  onClick={() => router.push(`/pages/Projects/${item.id}`)}>
                 <CardHeader className="flex flex-row items-center gap-2">
                   <p className="font-bold text-[1rem]">{item.name}</p>
                 </CardHeader>
-
-                <CardContent>
-                  <p className="text-[0.8rem]">{item.content}</p>
-                </CardContent>
 
                 <CardFooter>
                   <Badge className="bg-gray-200 text-black">{item.year}</Badge>
@@ -46,7 +46,7 @@ export default function Content2() {
             ))}
           </CardContent>
         </Card>
-
+{/* /////////////////////////////////////////////////////////////////////////// */}
         <div className="grid gap-4 grid-cols-1 md:grid-cols-[1fr_2fr]">
           <Card className="pt-4 min-h-[15rem]">
             <CardHeader className="flex flex-row items-center gap-2">
