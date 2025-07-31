@@ -31,7 +31,7 @@ export default function Header() {
           className="rounded h-auto w-[8rem] sm:w-[10rem]"
         />
         <div className="w-full">
-          <header className="w-full flex justify-between items-center pr-3">
+          <header className="w-full flex justify-between items-center pr-0 md:pr-3">
             <SparklesText className="text-[1rem] md:text-2xl font-bold">
               Jayvee Maniquiz
             </SparklesText>
