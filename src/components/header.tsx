@@ -32,7 +32,7 @@ export default function Header() {
         />
         <div className="w-full">
           <header className="w-full flex justify-between items-center pr-3">
-            <SparklesText className="text-[1.1rem] md:text-2xl font-bold">
+            <SparklesText className="text-[1rem] md:text-2xl font-bold">
               Jayvee Maniquiz
             </SparklesText>
             <DayNightSwitch
@@ -50,7 +50,7 @@ export default function Header() {
           <h1 className="text-[0.9rem]  md:text-[1rem] mt-2">
             Full-Stack Web Developer
           </h1>
-          <footer className="mt-2 flex items-center flex-wrap gap-3 w-full pr-3">
+          <footer className="mt-2 flex items-center gap-3 w-full pr-3">
             <Button
               className="h-[1.8rem] md:h-[1.8rem] bg-blue-500 cursor-pointer flex-auto   "
               onClick={() =>
