@@ -28,7 +28,7 @@ export default function Header() {
         <img
           src="/image/Profile.png"
           alt="Jayvee"
-          className="rounded h-auto w-[7rem] sm:w-[10rem]"
+          className="rounded h-auto w-[8rem] sm:w-[10rem]"
         />
         <div className="w-full">
           <header className="w-full flex justify-between items-center pr-3">
@@ -52,7 +52,7 @@ export default function Header() {
           </h1>
           <footer className="mt-2 flex items-center flex-wrap gap-3 w-full pr-3">
             <Button
-              className="h-[1.8rem] bg-blue-500 cursor-pointer"
+              className="h-[1.8rem] md:h-[1.8rem] bg-blue-500 cursor-pointer flex-auto   "
               onClick={() =>
                 redirect.push("https://www.facebook.com/jayvee.maniquiz.779/")
               }
@@ -61,7 +61,7 @@ export default function Header() {
               <p> Facebook</p>
             </Button>
             <Button
-              className="h-[1.8rem]  cursor-pointer"
+              className="h-[1.8rem]  cursor-pointer flex-auto   "
               onClick={() =>
                 redirect.push(
                   "https://github.com/JayveeFortissimo?tab=repositories"
