@@ -2,8 +2,8 @@
 
 import {
   CSSProperties,
+  HTMLAttributes,
   ReactElement,
-  ReactNode,
   useEffect,
   useRef,
   useState,
@@ -16,7 +16,7 @@ interface NeonColorsProps {
   secondColor: string;
 }
 
-interface NeonGradientCardProps {
+interface NeonGradientCardProps extends HTMLAttributes<HTMLDivElement> {
   /**
    * @default <div />
    * @type ReactElement
@@ -25,29 +25,12 @@ interface NeonGradientCardProps {
    * */
   as?: ReactElement;
   /**
-   * @default ""
-   * @type string
-   * @description
-   * The className of the card
-   */
-  className?: string;
-
-  /**
-   * @default ""
-   * @type ReactNode
-   * @description
-   * The children of the card
-   * */
-  children?: ReactNode;
-
-  /**
    * @default 5
    * @type number
    * @description
    * The size of the border in pixels
    * */
   borderSize?: number;
-
   /**
    * @default 20
    * @type number
@@ -55,7 +38,6 @@ interface NeonGradientCardProps {
    * The size of the radius in pixels
    * */
   borderRadius?: number;
-
   /**
    * @default "{ firstColor: '#ff00aa', secondColor: '#00FFF1' }"
    * @type string
@@ -63,8 +45,6 @@ interface NeonGradientCardProps {
    * The colors of the neon gradient
    * */
   neonColors?: NeonColorsProps;
-
-  [key: string]: any;
 }
 
 export const NeonGradientCard: React.FC<NeonGradientCardProps> = ({
