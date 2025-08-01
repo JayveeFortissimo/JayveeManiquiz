@@ -41,11 +41,11 @@ export default function Content1() {
               </div>
 
               <div
-                className="flex gap-2 items-center cursor-pointer"
+                className="flex gap-2 items-center cursor-pointer text-gray-400"
                 onClick={() => router.push("/pages/TechStack")}
               >
-                <p className="text-[0.8rem]">View All</p>
-                <ArrowRight size={16} />
+                <p className="text-[0.7rem]">View All</p>
+                <ArrowRight size={14} />
               </div>
             </CardHeader>
             <CardContent className="flex flex-col gap-5 text-sm">
