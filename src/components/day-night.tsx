@@ -87,7 +87,7 @@ const DayNightSwitch = React.forwardRef<HTMLDivElement, DayNightSwitchProps>(
 
     const currentMode: AnimationMode = checked ? "day" : "night";
 
-    // Don't render until mounted to prevent hydration issues
+    // Don`t render until mounted to prevent hydration issues
     if (!mounted) {
       return (
         <div

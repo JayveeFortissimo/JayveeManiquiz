@@ -3,7 +3,6 @@ import { ArrowLeft } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { useRouter } from "next/navigation";
 import Myprojects from "@/utils/myprojects";
-import { Card,CardHeader, CardContent, CardFooter } from "@/components/ui/card";
 import { NeonGradientCard } from "@/components/magicui/neon-gradient-card";
 export default function Page() {
 

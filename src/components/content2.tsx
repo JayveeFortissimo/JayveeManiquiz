@@ -66,11 +66,11 @@ export default function Content2() {
             </CardHeader>
             <CardContent className="flex flex-col gap-5 text-sm">
               <div>
-                When I'm not writing code, I enjoy exploring new technology trends to continuously expand my knowledge.
+                When I`m not writing code, I enjoy exploring new technology trends to continuously expand my knowledge.
               </div>
 
               <div>
-                I'm also a full-time musician with over 11 years of experience. When I'm not coding, I'm expanding my knowledge in music, as becoming a professional musician is my lifelong dream.
+                I`m also a full-time musician with over 11 years of experience. When I`m not coding, I`m expanding my knowledge in music, as becoming a professional musician is my lifelong dream.
               </div>
             </CardContent>
           </Card>
