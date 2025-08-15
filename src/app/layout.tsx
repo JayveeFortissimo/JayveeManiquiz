@@ -32,9 +32,9 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             {children}
-            <footer className="container mx-auto max-w-[50rem] min-h-[5rem] flex justify-between items-center border  border-t-gray-300 border-l-0 border-r-0 px-2 md:px-0 mt-3">
-              <p className="text-[0.9rem]">Jayvee.Business.com</p>
-              <p className="text-[0.9rem]">Feed Back</p>
+            <footer className="container mx-auto max-w-[50rem] min-h-[5rem] flex justify-center items-center border  border-t-gray-300 border-l-0 border-r-0 px-2 md:px-0 mt-3">
+              <p className="text-[0.8rem]">maniquizjayvee.business@gmail.com</p>
+           
               </footer>
           </ThemeProvider>
       </body>
