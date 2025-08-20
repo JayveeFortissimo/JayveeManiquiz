@@ -5,6 +5,11 @@ interface Experience {
 }
 
 const MyExperience: Experience[] = [
+    {
+    title: "Junior Frontend Developer",
+    company: "Sudobyte Web Solutions",
+    year: 2025,
+  },
   {
     title: "Frontend Developer",
     company: "GEER IT SOLUTIONS (OJT)",
