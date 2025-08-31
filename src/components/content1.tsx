@@ -100,8 +100,8 @@ export default function Content1() {
           </Card>
         </div>
         {/* study mo to */}
-        <Card className="p-2">
-          <CardContent className="pt-6">
+        <Card className="">
+          <CardContent className="py-2">
             <h2 className=" font-semibold mb-6 flex gap-3 items-center">
               {" "}
               <BriefcaseBusiness size={18} className="text-gray-500" />{" "}
