@@ -2,10 +2,9 @@
 import { Card, CardHeader, CardContent } from "../ui/Card";
 import { BriefcaseBusiness, Laptop, ArrowRight } from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
-import MyExperience from "@/utils/experience";
-import { cn } from "@/lib/utils";
 import { Frontend, Backend, DeveloperTools } from "@/utils/techStack";
 import { useRouter } from "next/navigation";
+import Timeline from "../timeline/Timeline";
 
 export default function Content1() {
   const router = useRouter();
@@ -101,35 +100,8 @@ export default function Content1() {
         </div>
   
         <Card>
-          <CardContent className="py-2">
-            <h2 className=" font-semibold mb-6 flex gap-3 items-center">
-              {" "}
-              <BriefcaseBusiness size={18} className="text-gray-500" />{" "}
-              Experience
-            </h2>
-            <div className="relative border-l pl-4 space-y-8">
-              {MyExperience.map((item, idx) => (
-                <div key={idx} className="relative group pl-2">
-                  <span
-                    className={cn(
-                      "absolute -left-[9px] top-1 w-3 h-3 rounded-full border-2",
-                      idx === 0
-                        ? "bg-primary border-primary animate-pulse"
-                        : "bg-muted-foreground border-background"
-                    )}
-                  />
-                  <div className="space-y-1">
-                    <h3 className="font-semibold text-md">{item.title}</h3>
-                    <p className="text-muted-foreground text-sm">
-                      {item.company}
-                    </p>
-                    <Badge variant="outline" className="text-xs">
-                      {item.year}
-                    </Badge>
-                  </div>
-                </div>
-              ))}
-            </div>
+          <CardContent>
+            <Timeline />
           </CardContent>
         </Card>
       </div>
