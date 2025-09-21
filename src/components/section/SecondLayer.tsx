@@ -1,7 +1,7 @@
 "use client";
-import { Card, CardHeader, CardContent, CardFooter } from "../UI/Card";
+import { Card, CardHeader, CardContent, CardFooter } from "../UI/card";
 import { Laptop, ArrowRight, User } from "lucide-react";
-import { Badge } from "@/components/UI/Badge";
+import { Badge } from "@/components/UI/badge";
 import { useRouter } from "next/navigation";
 import Myprojects from "@/utils/myprojects";
 import { SoftSkills, HardSkills } from "@/utils/skills";
