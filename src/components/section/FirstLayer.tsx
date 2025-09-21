@@ -1,7 +1,7 @@
 "use client";
-import { Card, CardHeader, CardContent } from "../ui/Card";
+import { Card, CardHeader, CardContent } from "../UI/Card";
 import { BriefcaseBusiness, Laptop, ArrowRight } from "lucide-react";
-import { Badge } from "@/components/ui/Badge";
+import { Badge } from "@/components/UI/Badge";
 import { Frontend, Backend, DeveloperTools } from "@/utils/techStack";
 import { useRouter } from "next/navigation";
 import Timeline from "../timeline/Timeline";

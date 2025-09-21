@@ -1,6 +1,6 @@
 "use client";
 import { MapPin, Facebook, Github, Mail } from "lucide-react";
-import { Button } from "../ui/Button";
+import { Button } from "../UI/Button";
 import { DayNightSwitch } from "../common/day-night";
 import { useTheme } from "next-themes";
 import { SparklesText } from "@/components/magicui/sparkles-text";

@@ -7,8 +7,8 @@ import {
   type Variants,
   type MotionProps,
 } from "framer-motion";
-import { Switch } from "@/components/ui/Switch";
-import { Label } from "@/components/ui/Label";
+import { Switch } from "@/components/UI/Switch";
+import { Label } from "@/components/UI/Label";
 import { cn } from "../../lib/utils";
 
 type DayNightSwitchProps = {
