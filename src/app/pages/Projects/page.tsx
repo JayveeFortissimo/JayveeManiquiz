@@ -1,6 +1,6 @@
 "use client";
 import { ArrowLeft } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
+import { Badge } from "@/components/ui-shad/Badge";
 import { useRouter } from "next/navigation";
 import Myprojects from "@/utils/myprojects";
 import { NeonGradientCard } from "@/components/magicui/neon-gradient-card";
