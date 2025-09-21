@@ -1,7 +1,7 @@
 "use client";
-import { Card, CardHeader, CardContent, CardFooter } from "./ui/card";
+import { Card, CardHeader, CardContent, CardFooter } from "../ui/Card";
 import { Laptop, ArrowRight, User } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
+import { Badge } from "@/components/ui/Badge";
 import { useRouter } from "next/navigation";
 import Myprojects from "@/utils/myprojects";
 import { SoftSkills, HardSkills } from "@/utils/skills";
@@ -12,9 +12,9 @@ export default function Content2() {
   const router = useRouter();
   return (
     <div className="min-h-[30rem]">
-      {/* Max width nilagay ko d2 kasi pag w mag ooverlap since rem ginamit ko so maximum width lang */}
+
       <div className="container mx-auto max-w-[50rem] mt-5 grid grid-cols-1  px-2 md:px-0 gap-2">
-        {/* My Projects */}
+     
         <Card className="pt-4 min-h-[15rem]">
           <CardHeader className="flex flex-row justify-between items-center gap-2">
             <div className="flex gap-2 items-center">
@@ -35,7 +35,7 @@ export default function Content2() {
           className=" gap-2 text-sm grid grid-cols-1  md:grid-cols-2 "
          
           >
-            {/* pag aralan mo ito deeply */}
+          
             {Myprojects.slice(0, 4).map((item, idx) => (
               <Card key={idx} className="cursor-pointer relative overflow-hidden transition-transform duration-300 ease-in-out hover:-translate-y-1 hover:scale-100"  onClick={() => router.push(`/pages/Projects/${item.id}`)}>
                 <CardHeader className="flex flex-row items-center gap-2">
@@ -57,7 +57,7 @@ export default function Content2() {
           </CardContent>
          
         </Card>
-{/* /////////////////////////////////////////////////////////////////////////// */}
+
         <div className="grid gap-4 grid-cols-1 md:grid-cols-[1fr_2fr]">
           <Card className="pt-4 min-h-[15rem]">
             <CardHeader className="flex flex-row items-center gap-2">

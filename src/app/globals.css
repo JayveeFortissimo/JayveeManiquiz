@@ -169,9 +169,7 @@
 
 .inter {
   font-family: 'Inter', sans-serif;
-  font-weight: 530; /* Adjust as needed */
+  font-weight: 530; 
   font-style: normal;
-  /* Add some letter spacing for beauty */
-  line-height: 1.6; /* Improve line height */
- /* Set a nice text color */
+  line-height: 1.6; 
 }

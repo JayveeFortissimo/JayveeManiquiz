@@ -1,12 +1,19 @@
-import Header from "@/components/header";
-import Content1 from "@/components/content1";
-import Content2 from "@/components/content2";
+import Header from "@/components/section/Header";
+import FirstLayer from "@/components/section/FirstLayer";
+import SecondLayer from "@/components/section/SecondLayer";
+import Container from "@/components/common/Container";
+
 export default function Home() {
   return (
- <div className="pt-10" >
- <Header/>
- <Content1/>
- <Content2/>
- </div>
+ <Container>
+ <Header
+ name="Jayvee Maniquiz"
+ location="Bulacan, Philippines"
+ profession="Full-Stack Web Developer"
+ image="/image/Profile.png"
+ />
+ <FirstLayer/>
+ <SecondLayer/>
+ </Container>
   );
 }

@@ -1,7 +1,7 @@
 "use client";
-import { Card, CardHeader, CardContent } from "./ui/card";
+import { Card, CardHeader, CardContent } from "../ui/Card";
 import { BriefcaseBusiness, Laptop, ArrowRight } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
+import { Badge } from "@/components/ui/Badge";
 import MyExperience from "@/utils/experience";
 import { cn } from "@/lib/utils";
 import { Frontend, Backend, DeveloperTools } from "@/utils/techStack";
@@ -99,8 +99,8 @@ export default function Content1() {
             </CardContent>
           </Card>
         </div>
-        {/* study mo to */}
-        <Card className="">
+  
+        <Card>
           <CardContent className="py-2">
             <h2 className=" font-semibold mb-6 flex gap-3 items-center">
               {" "}

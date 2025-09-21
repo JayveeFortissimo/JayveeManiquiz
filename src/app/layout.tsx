@@ -17,26 +17,28 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-    <header>
-      <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet"/>
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body className="inter">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
 
-    </header>
-      <body
-      className="inter"
-      >
-      <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            {children}
-            <footer className="container mx-auto max-w-[50rem] min-h-[5rem] flex justify-center items-center border  border-t-gray-300 border-l-0 border-r-0 px-2 md:px-0 mt-3">
-              <p className="text-[0.8rem]">maniquizjayvee.business@gmail.com</p>
-           
-              </footer>
-          </ThemeProvider>
+          <footer className="container mx-auto max-w-[50rem] min-h-[5rem] flex justify-center items-center border  border-t-gray-300 border-l-0 border-r-0 px-2 md:px-0 mt-3">
+            <p className="text-[0.8rem]">
+              maniquizjayvee.business@gmail.com
+            </p>
+          </footer>
+        </ThemeProvider>
       </body>
     </html>
   );
