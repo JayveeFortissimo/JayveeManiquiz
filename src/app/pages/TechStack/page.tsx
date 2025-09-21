@@ -1,7 +1,7 @@
 "use client";
 import { ArrowLeft } from "lucide-react";
 import { Frontend, Backend, DeveloperTools } from "@/utils/techStack";
-import { Badge } from "@/components/UI/badge";
+import { Badge } from "@/components/ui/badge";
 import { useRouter } from "next/navigation";
 
 export default function Page() {
